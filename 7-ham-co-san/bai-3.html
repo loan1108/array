@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upper case</title>
+</head>
+
+<body>
+    <script>
+        let str = "The Quick Brown Fox";
+        let upper = "ABCDEFGHIKLMNOPQRSTUVWXYZ"
+        let lower = "abcdefghiklmnopqrstuvwxyz"
+        let arr =[]
+       for(let i = 0; i< str.length; i++){
+        if(upper.indexOf(str[i]) !== -1){
+            arr.push(str[i].toLowerCase());
+        }else if(lower.indexOf(str[i]) !==1){
+            arr.push(str[i].toUpperCase())
+        }else{
+            arr.push(str[i])
+        }
+       }
+       let newStr = arr.join("")
+       console.log(newStr)
+    </script>
+</body>
+
+</html>

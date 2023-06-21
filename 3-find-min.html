@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Max</title>
+</head>
+
+<body>
+    <script>
+        function findMax() {
+            let numbers = [-3, 5, 1, 3, 3, 10];
+            let max = 0;
+            let index;
+            for (let i = 0; i < numbers.length; i++) {
+                if (numbers[i] >= max) {
+                    max = numbers[i];
+                    index = i;
+                    
+
+                }
+            }
+            alert(`Max: ${max} ở vị trí ${index}`);
+        }
+        findMax();
+    </script>
+</body>
+
+</html>

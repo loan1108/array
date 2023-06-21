@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thao tac voi mang</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <button type="button" onclick="addArr()">Add</button>
+    <button type="button" onclick = "displayArr()">Display</button>
+    <div id="result"></div>
+    <script>
+        let input;
+        let result = document.getElementById("result");
+        let arr = []
+        function addArr(){
+            input = document.getElementById("input").value;
+            arr.push(input);
+            console.log(arr)
+            return arr;
+        }
+        function displayArr(){
+            let e = "<hr>"
+            for(let i = 0; i <= arr.length-1; i++){
+                
+                e += `Element ${i}:  ${arr[i]} <br>`;
+                
+            }
+            result.innerHTML = e;
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caro</title>
+</head>
+
+<body>
+    <h3>Caro Game Simples</h3>
+    <table id="carogame"></table>
+    <input type="button" value="Change Value" onclick="changeValue()">
+    <script>
+        let table = document.getElementById("carogame");
+        let str = "";
+        let data = [];
+        for (let i = 0; i < 5; i++) {
+            data[i] = [0, 0, 0, 0, 0];
+            for (let j = 0; j < 5; j++){
+                data[i][j] = 0;
+            }
+        }
+       
+        function displayCaro() {
+            for (let i = 0; i < 5; i++) {
+                str += "<tr><td>"
+                for (let j = 0; j < 5; j++) {
+                    str += data[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp"
+                }
+                str += "</td></tr>"
+
+            }
+            table.innerHTML = str;
+        }
+         displayCaro()
+ 
+        function changeValue() {
+            let positionX = +prompt("X: ");
+            let positionY = +prompt("Y: ");
+            data[positionX][positionY] = "X";
+            displayCaro();
+        }
+        console.log(data)
+
+      
+    </script>
+</body>
+
+</html>
